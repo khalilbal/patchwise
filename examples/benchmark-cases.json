@@ -1,0 +1,42 @@
+[
+  {
+    "case_id": "suspicious-signin",
+    "event_ids": ["signin-001", "signin-001-copy"],
+    "required_evidence": [
+      "Both underlying event IDs and the duplicate relationship",
+      "Successful sign-in, MFA false, device_known false",
+      "Source IP and UTC timing",
+      "Travel/VPN and independent user confirmation are missing; compromise is not established"
+    ]
+  },
+  {
+    "case_id": "benign-lookalike",
+    "event_ids": ["signin-benign-002"],
+    "required_evidence": [
+      "Underlying event ID and UTC timing",
+      "MFA true and device_known true",
+      "Different source IP from the suspicious sign-in",
+      "VPN approval is a fixture assertion that needs independent verification"
+    ]
+  },
+  {
+    "case_id": "network-connection",
+    "event_ids": ["network-003", "network-003-copy"],
+    "required_evidence": [
+      "Both event IDs and the duplicate relationship",
+      "Source and destination IPs, TCP destination port 443",
+      "Allowed outcome and UTC timing",
+      "Process identity and destination reputation are missing; an allowed connection alone does not establish maliciousness"
+    ]
+  },
+  {
+    "case_id": "missing-evidence",
+    "event_ids": ["incomplete-004"],
+    "required_evidence": [
+      "Underlying event ID and UTC timing",
+      "Empty evidence object",
+      "Missing outcome, IP, MFA and device context",
+      "Inconclusive disposition or equivalent request for more context rather than a claim of compromise"
+    ]
+  }
+]

@@ -1,0 +1,2 @@
+# Optional local log-analysis lab; isolated from the app runtime dependencies.
+duckdb==1.5.6

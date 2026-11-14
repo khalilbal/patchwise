@@ -1,0 +1,9 @@
+trial_order,case_id,workflow
+1,suspicious-signin,manual
+2,suspicious-signin,ai-assisted
+3,benign-lookalike,ai-assisted
+4,benign-lookalike,manual
+5,network-connection,manual
+6,network-connection,ai-assisted
+7,missing-evidence,ai-assisted
+8,missing-evidence,manual

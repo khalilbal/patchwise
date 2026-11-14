@@ -1,0 +1,7 @@
+event_id,timestamp,source,event_type,severity,user,host,evidence
+signin-001,2026-10-01T09:01:00Z,identity-lab,sign_in,high,alex@example.test,lab-laptop-01,"{""country"": ""ZZ"", ""device_known"": false, ""message"": ""Unfamiliar sign-in. Lab signal only; validate travel and VPN context."", ""mfa"": false, ""outcome"": ""success"", ""src_ip"": ""203.0.113.25""}"
+signin-001-copy,2026-10-01T09:01:20Z,identity-lab,sign_in,high,alex@example.test,lab-laptop-01,"{""country"": ""ZZ"", ""device_known"": false, ""message"": ""Unfamiliar sign-in. Lab signal only; validate travel and VPN context."", ""mfa"": false, ""outcome"": ""success"", ""src_ip"": ""203.0.113.25""}"
+signin-benign-002,2026-10-01T09:02:00Z,identity-lab,sign_in,high,alex@example.test,lab-laptop-01,"{""country"": ""CA"", ""device_known"": true, ""message"": ""Approved lab VPN egress per lab fixture; analyst must verify with independent context."", ""mfa"": true, ""outcome"": ""success"", ""src_ip"": ""192.0.2.10""}"
+network-003,2026-10-01T10:12:00Z,network-lab,outbound_connection,medium,,lab-server-01,"{""dest_ip"": ""198.51.100.40"", ""dest_port"": 443, ""outcome"": ""allowed"", ""protocol"": ""tcp"", ""src_ip"": ""192.0.2.20""}"
+network-003-copy,2026-10-01T10:12:10Z,network-lab,outbound_connection,medium,,lab-server-01,"{""dest_ip"": ""198.51.100.40"", ""dest_port"": 443, ""outcome"": ""allowed"", ""protocol"": ""tcp"", ""src_ip"": ""192.0.2.20""}"
+incomplete-004,2026-10-01T11:00:00Z,identity-lab,sign_in,medium,casey@example.test,,{}
